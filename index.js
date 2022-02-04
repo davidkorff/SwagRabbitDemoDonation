@@ -1,5 +1,5 @@
 window.onload = function(e){
-    console.log('loaded')
+    console.log('loaded v4')
 
     var button = document.createElement("input")
     button.setAttribute("type", "button")
