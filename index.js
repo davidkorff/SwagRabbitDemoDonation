@@ -57,6 +57,27 @@ window.onload = function(e){
     function clickTheDonationFunction(){
       console.log("wowza")
       selecteddonation = this
+// debugger
+      if(document.getElementsByClassName("u-hover-black").length>0){
+          document.getElementsByClassName("u-hover-black")[0].classList.add("u-palette-1-base")
+          document.getElementsByClassName("u-hover-black")[0].classList.add("u-hover-palette-1-dark-3")
+          document.getElementsByClassName("u-hover-black")[0].classList.remove("u-border-2")
+          document.getElementsByClassName("u-hover-black")[0].classList.remove("u-border-black")
+          document.getElementsByClassName("u-hover-black")[0].classList.remove("u-none")
+          document.getElementsByClassName("u-hover-black")[0].classList.remove("u-text-black")
+          document.getElementsByClassName("u-hover-black")[0].classList.remove("u-text-hover-white")
+          document.getElementsByClassName("u-hover-black")[0].classList.remove("u-hover-black")
+        }
+
+
+      this.classList.remove("u-palette-1-base")
+      this.classList.remove("u-hover-palette-1-dark-3")
+      this.classList.add("u-border-2")
+      this.classList.add("u-border-black")
+      this.classList.add("u-hover-black")
+      this.classList.add("u-none")
+      this.classList.add("u-text-black")
+      this.classList.add("u-text-hover-white")
     }
 
     function enteringFormInfo(){
@@ -80,21 +101,5 @@ window.onload = function(e){
 }
 
 
-// <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-//   <div class="u-form u-form-1">
-//     <!-- <form onsubmit="return setAction(this) class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 15px;" source="custom" name="form"" -->
-//     <form onsubmit="return setAction(this)"  class="u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 15px;" name="form">
-//       <div class="u-form-group u-form-name u-label-none u-form-group-1">
-//         <!-- <label for="name-6797" class="u-label">Name</label> -->
-//         <input type="text" placeholder="Name" id="name-6797" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" >
-//       </div>
-//       <div class="u-form-email u-form-group u-label-none u-form-group-2">
-//         <!-- <label for="email-6797" class="u-label">Email</label> -->
-//         <input type="email" placeholder="Email" id="email-6797" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" >
-//       </div>
-//       <div class="u-align-left u-form-group u-form-submit u-form-group-3">
-//         <input type="submit" value="Submit" class="u-btn u-btn-submit u-button-style">
-//       </div>
-//       <div class="u-form-send-message u-form-send-success">Thank you! Your message has been sent.</div>
-//       <div class="u-form-send-error u-form-send-message">Unable to send your message. Please fix errors then try again.</div>
-//     </form>
+// u-border-2 u-border-black    u-hover-black u-none u-text-black u-text-hover-white
+//   u-hover-palette-1-dark-3 u-palette-1-base
