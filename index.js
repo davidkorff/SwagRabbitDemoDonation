@@ -92,8 +92,9 @@ window.onload = function(e){
       var xmlHttp = new XMLHttpRequest();
           xmlHttp.open( "GET", `https://hooks.zapier.com/hooks/catch/11611749/b5l8cbh?toemail=${document.getElementById("email-6797").value}&message=heythere&smartlink=https://listings.swagrabbit.com/bn4&promocode=thisthepromo6`, false );
           xmlHttp.send( null );
-          return xmlHttp.responseText;
-
+          // return xmlHttp.responseText;
+      alert("Thank you for your donation")
+      window.location.reload();
     }
 
 
