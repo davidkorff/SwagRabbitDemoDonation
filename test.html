@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <iframe style="border: 1px solid red; width: 100%; height: 500px;" src="" id="app"></iframe>
+
+        <script>
+        let iframeOrigin = "https://g3d-app.com";
+        let iframeUrl = iframeOrigin + "/s/app/acp3_2/en_GB/default.html#p=1007644&r=2d-canvas&guid=COMPANYREFID&a2c=postMessage";
+
+        let meo = location.origin;
+        let mei = Math.random().toString(16).substr(2);
+
+        window.addEventListener("message", e => {
+            if(e.origin == iframeOrigin && e.data.id == mei) {
+                switch(e.data.name) {
+                    case 'ADD_TO_CART_CALLBACK':
+                        var printJobRef = e.data.body.items[0].ref;
+                        console.log(printJobRef);
+                        break;
+                }
+            }
+        });
+
+        let iframe = document.getElementById('app');
+        iframe.src = iframeUrl + "&meo=" + meo + "&mei=" + mei;
+        </script>
+    </body>
+</html>
